@@ -12,6 +12,7 @@ AWS stack to update another Lambda's environment settings with new Cumulus Distr
 ## Environment Settings
 ```
 $ export STACKNAME=<Name of your stack>
+$ export PROJECT=<The project name for resource cost tracking>
 $ export LAMBDA=<The Arn of the Lambda that will receive new S3 Credentials>
 $ export USERNAME=<A valid Earth Data Login user name>
 $ export PASSWORD=<A valid Earth Data Login password>
