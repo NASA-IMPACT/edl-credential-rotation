@@ -1,5 +1,5 @@
 import os
-from unittest.mock import MagicMock, PropertyMock, patch
+from unittest.mock import patch
 
 from lambdas.handler import handler
 
