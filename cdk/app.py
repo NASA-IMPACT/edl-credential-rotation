@@ -8,6 +8,7 @@ from aws_cdk import core
 
 # Required env settings
 STACKNAME = os.environ["STACKNAME"]
+PROJECT = os.environ["PROJECT"]
 LAMBDA = os.environ["LAMBDA"]
 USERNAME = os.environ["USERNAME"]
 PASSWORD = os.environ["PASSWORD"]
@@ -71,7 +72,7 @@ app = core.App()
 Stack(scope=app, stack_name=STACKNAME)
 
 for k, v in {
-    "Project": "hls",
+    "Project": PROJECT,
     "Stack": STACKNAME,
 }.items():
     core.Tags.of(app).add(k, v, apply_to_launched_instances=True)
