@@ -41,11 +41,11 @@ class Stack(core.Stack):
 
         self.function = aws_lambda.Function(
             self,
-            f"{stack_name}-raster-lambda",
+            f"{stack_name}-update-lambda",
             runtime=aws_lambda.Runtime.PYTHON_3_8,
             role=self.role,
             code=aws_lambda.Code.from_docker_build(
-                path=os.path.abspath("../edl_credential_rotation"),
+                path=os.path.abspath("./"),
                 file="Dockerfile",
                 platform="linux/amd64",
             ),
