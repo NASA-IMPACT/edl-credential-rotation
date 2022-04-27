@@ -10,8 +10,8 @@ from aws_cdk import core
 STACKNAME = os.environ["STACKNAME"]
 PROJECT = os.environ["PROJECT"]
 LAMBDA = os.environ["LAMBDA"]
-USERNAME = os.environ["USERNAME"]
-PASSWORD = os.environ["PASSWORD"]
+USERNAME = os.environ["EDL_USERNAME"]
+PASSWORD = os.environ["EDL_PASSWORD"]
 
 
 class Stack(core.Stack):
