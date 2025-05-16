@@ -1,20 +1,10 @@
 from setuptools import find_packages, setup
 
-# runtime requirements.
-aws_cdk_version = "1.139.0"
-aws_cdk_reqs = [
-    "core",
-    "aws-iam",
-    "aws-lambda",
-    "aws-events",
-    "aws-events-targets",
-]
-
 inst_reqs = [
     "boto3",
+    "pydantic-settings",
+    "aws-cdk-lib==2.196.0"
 ]
-
-inst_reqs.append([f"aws_cdk.{x}=={aws_cdk_version}" for x in aws_cdk_reqs])
 
 extra_reqs = {
     "test": ["pytest", "pytest-cov", "black", "flake8"],
