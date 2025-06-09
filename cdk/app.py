@@ -42,7 +42,7 @@ class Stack(Stack):
         self.function = aws_lambda.Function(
             self,
             f"{settings.stackname}-update-lambda",
-            runtime=aws_lambda.Runtime.PYTHON_3_8,
+            runtime=aws_lambda.Runtime.PYTHON_3_9,
             role=self.role,
             code=aws_lambda.Code.from_docker_build(
                 path=os.path.abspath("./"),
