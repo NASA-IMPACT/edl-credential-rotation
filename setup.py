@@ -3,7 +3,7 @@ from setuptools import find_packages, setup
 inst_reqs = [
     "boto3",
     "pydantic-settings",
-    "aws-cdk-lib==2.196.0"
+    "aws-cdk-lib==2.199.0"
 ]
 
 extra_reqs = {
@@ -22,7 +22,7 @@ extra_reqs = {
 setup(
     name="edl-credential-rotation",
     version="0.0.1",
-    python_requires=">=3.8",
+    python_requires=">=3.9",
     author="development seed",
     packages=find_packages(),
     package_data={
