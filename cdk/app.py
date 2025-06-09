@@ -14,8 +14,9 @@ if settings.bootstrap_qualifier:
         "@aws-cdk/core:bootstrapQualifier", settings.bootstrap_qualifier
     )
 
+
 class Stack(Stack):
-    def __init__(self, app:App, id:str, **kwargs) -> None:
+    def __init__(self, app: App, id: str, **kwargs) -> None:
         super().__init__(app, id, **kwargs)
 
         self.role = iam.Role(
@@ -66,7 +67,6 @@ class Stack(Stack):
             schedule=aws_events.Schedule.expression("cron(0/30 * * * ? *)"),
         )
         self.rule.add_target(aws_events_targets.LambdaFunction(self.function))
-
 
 
 Stack(app, settings.stackname)
