@@ -3,7 +3,7 @@ AWS stack to update another Lambda's environment settings with new Cumulus Distr
 
 
 ## Requirements
-- Python>=3.8
+- Python>=3.9
 - Docker
 - tox
 - aws-cli

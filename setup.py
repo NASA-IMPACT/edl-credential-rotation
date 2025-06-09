@@ -1,20 +1,10 @@
 from setuptools import find_packages, setup
 
-# runtime requirements.
-aws_cdk_version = "1.139.0"
-aws_cdk_reqs = [
-    "core",
-    "aws-iam",
-    "aws-lambda",
-    "aws-events",
-    "aws-events-targets",
-]
-
 inst_reqs = [
     "boto3",
+    "pydantic-settings",
+    "aws-cdk-lib==2.199.0"
 ]
-
-inst_reqs.append([f"aws_cdk.{x}=={aws_cdk_version}" for x in aws_cdk_reqs])
 
 extra_reqs = {
     "test": ["pytest", "pytest-cov", "black", "flake8"],
@@ -32,7 +22,7 @@ extra_reqs = {
 setup(
     name="edl-credential-rotation",
     version="0.0.1",
-    python_requires=">=3.8",
+    python_requires=">=3.9",
     author="development seed",
     packages=find_packages(),
     package_data={
